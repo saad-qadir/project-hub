@@ -1,13 +1,19 @@
 # Dependencies
-node_modules/
-vendor/
+/vendor/
+/node_modules/
 
-# Environment files
+# Environment and Configuration
 .env
-.env.local
-.env.*.local
+.env.*
+!.env.example
+/config/mail.php
+/config/database.php
 
-# IDE files
+# Uploads and User Content
+/assets/uploads/*
+!/assets/uploads/.gitkeep
+
+# IDE and Editor files
 .idea/
 .vscode/
 *.swp
@@ -15,20 +21,25 @@ vendor/
 
 # OS files
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
 Thumbs.db
 
-# Logs
+# Logs and Debug
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+/logs/*
+!/logs/.gitkeep
 
-# Build files
-dist/
-build/
+# Build and Cache
+/dist/
+/build/
 *.min.js
 *.min.css
-
-# Cache
 .cache/
 .temp/ 
